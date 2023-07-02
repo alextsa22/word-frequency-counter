@@ -1,6 +1,9 @@
-# word-frequency-counter
+# Word Frequency Counter
 
-Aims
+Task description
+----------------
+
+**Aims**
 
 The aim of this exercise is to test your ability to write a working program in Go.
 
@@ -23,7 +26,7 @@ slices are allowed). The use of I/O streams is permitted, the use of Go "string"
 • Most candidates take between 1 and 5 hours. Please do not spend longer than 6 hours on this task. In any case, please
 indicate approximately how long you spent writing your solution.
 
-Languages and Tools
+**Languages and Tools**
 
 • The reference platform for the task is a Linux 64bit system. If you do not have access to such a platform you should
 implement it on a Linux or Windows environment of your choosing, however, you should be prepared to explain how your
@@ -33,12 +36,14 @@ solution may need to be modified to run on the reference platform.
 
 • Your program should also handle binary files (e.g. /boot/vmlinuz) without crashing.
 
-The Problem
+**The Problem**
 
 Given the attached text file as an argument, your program will read the file, and output the 20 most frequently used
 words in the file in order, along with their frequency. The output should be the same to that of the following bash
 program:
 
+```bash
 #!/usr/bin/env bash
 
 cat $1 | tr -cs 'a-zA-Z' '[\n*]' | grep -v "^$" | tr '[:upper:]' '[:lower:]'| sort | uniq -c | sort -nr | head -20
+```
